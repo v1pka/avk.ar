@@ -7,7 +7,7 @@ import ru.avk.domain.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-	List<User> findByLastNameStartsWithIgnoreCase(String lastName);
+	List<User> findByFullNameStartsWithIgnoreCase(String fullName);
 
-	List<User> findByLoginStartsWithIgnoreCase(String login);
+	User findByUsernameStartsWithIgnoreCase(String login);
 }

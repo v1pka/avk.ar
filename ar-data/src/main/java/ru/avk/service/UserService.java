@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface UserService extends CrudService<User, Long> {
     List<User> findByLastNameStartsWithIgnoreCase(String lastName);
-    List<User> findByLoginStartsWithIgnoreCase(String login);
+    User findByUsernameStartsWithIgnoreCase(String login);
 }

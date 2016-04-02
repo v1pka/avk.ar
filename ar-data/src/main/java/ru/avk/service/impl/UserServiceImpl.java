@@ -1,9 +1,11 @@
-package ru.avk.service;
+package ru.avk.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.avk.domain.User;
 import ru.avk.repository.UserRepository;
+import ru.avk.service.UserService;
+import ru.avk.service.impl.CrudServiceImpl;
 
 import java.util.List;
 
@@ -23,11 +25,11 @@ public class UserServiceImpl extends CrudServiceImpl<User, Long> implements User
 
     @Override
     public List<User> findByLastNameStartsWithIgnoreCase(String lastName) {
-        return userRepository.findByLastNameStartsWithIgnoreCase(lastName);
+        return userRepository.findByFullNameStartsWithIgnoreCase(lastName);
     }
 
     @Override
-    public List<User> findByLoginStartsWithIgnoreCase(String login) {
-        return userRepository.findByLoginStartsWithIgnoreCase(login);
+    public User findByUsernameStartsWithIgnoreCase(String login) {
+        return userRepository.findByUsernameStartsWithIgnoreCase(login);
     }
 }
