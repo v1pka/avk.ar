@@ -50,7 +50,6 @@ public class UserEditor extends VerticalLayout {
 	}
 
 	public interface ChangeHandler {
-
 		void onChange();
 	}
 

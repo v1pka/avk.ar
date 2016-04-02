@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * Created by ipopkov on 02/04/16.
+ */
 @Entity
 public class User implements UserDetails {
 

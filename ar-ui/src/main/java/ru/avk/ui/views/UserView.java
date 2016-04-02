@@ -36,7 +36,7 @@ public class UserView extends AbstractView {
 		this.editor = editor;
 		this.grid = new Grid();
 		this.filter = new TextField();
-		this.addNewBtn = new Button("New customer", FontAwesome.PLUS);
+		this.addNewBtn = new Button("New user", FontAwesome.PLUS);
 		init();
 		addComponent(new GoToMainViewLink());
 	}
@@ -55,7 +55,7 @@ public class UserView extends AbstractView {
 		grid.setHeight(300, Unit.PIXELS);
 		grid.setColumns("id", "username", "fullName", "enabled");
 
-		filter.setInputPrompt("Filter by last name");
+		filter.setInputPrompt("Filter by fullName starts with");
 
 		// Hook logic to components
 
@@ -92,7 +92,7 @@ public class UserView extends AbstractView {
 		}
 		else {
 			grid.setContainerDataSource(new BeanItemContainer(User.class,
-					userService.findByLastNameStartsWithIgnoreCase(text)));
+					userService.findByFullNameStartsWithIgnoreCase(text)));
 		}
 	}
 

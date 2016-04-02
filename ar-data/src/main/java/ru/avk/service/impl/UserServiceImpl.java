@@ -24,8 +24,8 @@ public class UserServiceImpl extends CrudServiceImpl<User, Long> implements User
     private UserRepository userRepository;
 
     @Override
-    public List<User> findByLastNameStartsWithIgnoreCase(String lastName) {
-        return userRepository.findByFullNameStartsWithIgnoreCase(lastName);
+    public List<User> findByFullNameStartsWithIgnoreCase(String fullName) {
+        return userRepository.findByFullNameStartsWithIgnoreCase(fullName);
     }
 
     @Override
