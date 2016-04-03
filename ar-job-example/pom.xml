@@ -7,7 +7,7 @@
     <groupId>ru.avk</groupId>
     <artifactId>ar-job-example</artifactId>
     <version>0.1.0</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <parent>
         <groupId>ru.avk</groupId>

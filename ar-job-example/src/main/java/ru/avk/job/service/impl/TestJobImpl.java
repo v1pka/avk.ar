@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import ru.avk.base.job.service.ScheduledTask;
 import ru.avk.domain.User;
 import ru.avk.service.UserService;
-import ru.avk.service.impl.Application;
 
 import java.util.UUID;
 
