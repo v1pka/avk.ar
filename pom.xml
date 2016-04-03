@@ -9,8 +9,10 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>ar-data</module>
+		<module>ar-base-job</module>
         <module>ar-ui</module>
-        <module>ar-data</module>
+        <module>ar-job-example</module>
     </modules>
 
 	<parent>
